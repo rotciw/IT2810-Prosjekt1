@@ -1,0 +1,153 @@
+body {
+    background: #000d34;
+    margin: 15px auto auto auto;
+    max-width: 1400px;
+    font-size: 13pt;
+    color: #000d34;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.container {
+    background-color: #f5f4ed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid #131862;
+    border-radius: 15px;
+    margin: 3% 8% 3% 8%;
+    padding: 25px 50px 25px 50px;
+}
+
+.container:last-of-type {
+    cursor: pointer;
+}
+
+.flag-down, .circle-flag-down {
+    animation-name: down;
+    animation-fill-mode:forwards;
+    animation-duration: 1s;
+}
+
+@keyframes down {
+    from {
+        y: 75;
+        cy: 100;
+    }
+    to {
+        y: 150;
+        cy: 175;
+    }
+}
+
+.flag-up, .circle-flag-up {
+    animation-duration: 1s;
+    animation-name: up;
+    animation-fill-mode:forwards;
+}
+
+@keyframes up {
+    from {
+        y: 150;
+        cy: 175;
+    }
+    to {
+        y: 75;
+        cy: 100;
+    }
+}
+
+.to-day {
+    animation-duration: 1s;
+    animation-name: day;
+    animation-fill-mode:forwards;
+}
+
+@keyframes day {
+    from {
+        background: #131862
+    }
+    to {
+        background: skyblue;
+    }
+}
+
+.to-night {
+    animation-duration: 1s;
+    animation-name: night;
+    animation-fill-mode:forwards;
+}
+
+@keyframes night {
+    from {
+        background:skyblue;
+    }
+    to {
+        background:#131862
+    }
+}
+
+.moon-animation {
+    animation-duration: 1s;
+    animation-name: moon;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+}
+
+@keyframes moon {
+    0% {
+        transform:rotate(0deg)
+        translate(0px)
+        rotate(0deg);
+    }
+    100% {
+        transform:rotate(90deg)
+        translate(100px)
+        rotate(180deg);
+    }
+}
+
+.sun-animation {
+    animation-duration: 1s;
+    animation-name: sun;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+}
+
+@keyframes sun {
+    0% {
+        transform:rotate(90deg)
+        translate(100px)
+        rotate(-180deg);
+    }
+    100% {
+        transform:rotate(0deg)
+        translate(0px)
+        rotate(0deg);
+    }
+}
+
+.svg-art {
+    background:#131862;
+    border: 2px solid #f5f4ed;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.canvas-art {
+    background: #131862;
+    border: 2px solid #f5f4ed;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    cursor: zoom-in;
+}
+
+#documentation {
+    display: none;
+}
