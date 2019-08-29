@@ -46,42 +46,47 @@
         <ul>
                 <li><b>Gi en beskrivelse av hvordan du har brukt CSS-grid og Flexbox-layout, forklar dine valg. </b></li>
                     <ul>
-                        <li>Jeg har brukt flexbox-layout til å dele innholdet mitt i containers. Videre ligger de to kunstverkene inni en slik container
-                            ved siden av hverandre, eller "wrappes" under om skjermen blir mindre.<br>
-                            Jeg valgte å gå for flexbox fordi oppgaven var spesifikk, det var klart hva innholdet skulle være, slik at jeg kunne gå for content-first,
-                            fremfor css grid der man tenker layout først. Samtidig var dette en kort nettside slik at jeg ikke trengte avansert layout.</li>
+                        <li>Jeg har brukt flexbox-layout i mine "containers". Videre ligger de to kunstverkene inni en slik container
+                            ved siden av hverandre som flexbox items. I hovedsak vil de "wrappes" med "flex-wrap" under hverandre om skjermen liten nok.<br>
+                            Jeg valgte å gå for flexbox fordi oppgaven var spesifikk, det var klart hva innholdet skulle være, slik at jeg kunne fokusere på innhold først,
+                            fremfor css grid der man tenker layout først. Samtidig var dette en kort nettside slik at jeg ikke trengte veldig avansert layout.</li>
                     </ul>
                 <li><b>Gi en beskrivelse av hvordan du har brukt HTML canvas og SVG i HTML. </b></li>
                     <ul>
                         <li>Jeg har brukt SVG til kunstverket "Nacht und Tag". Kunstverket bruker statisk SVG, med css animasjoner som "transformer"
-                            eller flytter disse statiske elementene.</li>
-                        <li>For det andre kunstverket "Nachtsprung" ble HTML canvas brukt. Her ble ulike bokser og sirkler tegnet med JavaScript.
+                            eller flytter disse statiske elementene rundt.</li>
+                        <li>For det andre kunstverket "Nachtsprung" ble HTML canvas brukt. Her ble ulike boksene og sirklene tegnet med JavaScript og Canvas API'et.
                             Det var ikke like intuitivt å flytte på tegningene med animasjoner, slik at jeg valgte å lage en hover effekt som viser hva som skjuler seg bak kunstverket.
                         </li>
                     </ul>
                 <li><b>Gi en kort beskrivelse av hvordan du har brukt jQuery.</b></li>
                     <ul>
                         <li>Jeg har brukt jQuery til click og hover funksjoner. For "Nacht und Tag" bruker man en jQuery klikk funksjon for å initialisere animasjon.
-                            Mens for "Nachtsprung" bruker man jQuery for å hovere for å se det skjulte kunstverket.
-                            I tillegg også for å velge et element i HTML, for eksempel en bestemt div klasse som "canvas-art".</li>
+                            Altså legge til og fjerne css animasjon klasser, dette gir effekten av at man "toggler" en animasjon.
+                            For "Nachtsprung" bruker jeg jQuery for å "hovere" for å se det skjulte kunstverket.
+                            I tillegg brukes jQuery for å velge et element i HTML, for eksempel en bestemt div klasse som "canvas-art". Det er på denne måten
+                            jeg styrer de ulike div'ene.
+                        </li>
                     </ul>
                 <li><b>Gi en kort beskrivelse av hvordan du har utført cross-browser testing. </b></li>
                     <ul>
-                        <li>Cross browser testing er utført ved å åpne siden i forskjellige browsere (firefox, chrome, edge). Deretter har jeg åpnet inspiser panelet (ctrl + shit + i).
-                            Dette verktøyet har jeg brukt for å skalere nettsiden for å se om jeg får ønsket oppførsel av nettsiden (wrapping, jquery funksjonene, animasjonene etc.).
+                        <li>Cross browser testing er utført ved å åpne siden i forskjellige browsere (firefox, chrome, edge).
+                            Så ble enkle sjekk som å prøve ulike vindusstørrelser testet. Først gjennom nettleservinduskalering, deretter har jeg åpnet inspiser panelet (ctrl + shit + i).
+                           Slik har jeg sjekket ønsket oppførsel av nettsiden i forhold til wrapping av kunstverkene.
+                           Etter det har jeg testet interaksjonene med kunstverkene ved å klikke eller hovere over bildene i de respektive nettleserne.
                         </li>
                     </ul>
                 <li><b>List opp de viktigste (mest nyttige) informasjonskildene du har brukt (tutorials, websider, bøker).</b></li>
                     <ul>
-                        <li>Jeg brukte kildene på blackboard listen for å lese meg opp op de ulike teknologiene. Den nyttigste er den som er nevnt nederst på siden,
+                        <li>Jeg brukte kildene på blackboard listen for å lese meg opp på de ulike teknologiene. Den nyttigste er den som er nevnt nederst på siden,
                             for å velge css grid eller flexbox-layout.
                         </li>
-                        <li>Etter å ha valgt flexbox var <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">denne veldig nyttig:</a></li>
+                        <li>Etter å ha valgt flexbox var <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a> veldig nyttig.</li>
                         <li>For CSS animations var <a href="https://www.w3schools.com/css/css3_animations.asp">https://www.w3schools.com/css/css3_animations.asp</a> nyttig.</li>
                     </ul>
                 <li><b>Husk å oppgi kilder hvis du gjenbruker kodesnutter. </b></li>
                     <ul>
-                        <li>Forskjellig fra JavaScript: jQuery henter faktiske DOM element i numerisk liste, så må hente indeks objekt
+                        <li>Forskjellig fra JavaScript: jQuery henter faktiske DOM element i numerisk liste, så må hente indeks objekt for å kunne bruke canvas.getContext funksjonen.
                             <a target="_blank" href="https://stackoverflow.com/questions/2925130/jquery-equivalent-of-getting-the-context-of-a-canvas">https://stackoverflow.com/questions/2925130/jquery-equivalent-of-getting-the-context-of-a-canvas</a>
                         </li>
                     </ul>
