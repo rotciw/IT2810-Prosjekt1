@@ -27,43 +27,34 @@ h1 {
 }
 
 .flag-down, .circle-flag-down {
-    animation-name: down;
-    animation-fill-mode:forwards;
-    animation-duration: 1s;
+    animation: down 1s forwards;
 }
 
 @keyframes down {
     from {
-        y: 75;
-        cy: 100;
+        transform: translateY(-75px);
     }
     to {
-        y: 150;
-        cy: 175;
+        transform: translateY(-0px);
     }
 }
 
 .flag-up, .circle-flag-up {
-    animation-duration: 1s;
-    animation-name: up;
-    animation-fill-mode:forwards;
+    animation: up 1s forwards;
 }
 
 @keyframes up {
     from {
-        y: 150;
-        cy: 175;
+        transform: translateY(0px);
     }
     to {
-        y: 75;
-        cy: 100;
+        transform: translateY(-75px);
     }
 }
 
+
 .to-day {
-    animation-duration: 1s;
-    animation-name: day;
-    animation-fill-mode:forwards;
+    animation: day 1s forwards;
 }
 
 @keyframes day {
@@ -76,9 +67,7 @@ h1 {
 }
 
 .to-night {
-    animation-duration: 1s;
-    animation-name: night;
-    animation-fill-mode:forwards;
+    animation: night 1s forwards;
 }
 
 @keyframes night {
@@ -91,9 +80,7 @@ h1 {
 }
 
 .moon-animation {
-    animation-duration: 1s;
-    animation-name: moon;
-    animation-fill-mode: forwards;
+    animation: moon 1s forwards;
     transform-origin: center;
 }
 
@@ -111,9 +98,7 @@ h1 {
 }
 
 .sun-animation {
-    animation-duration: 1s;
-    animation-name: sun;
-    animation-fill-mode: forwards;
+    animation: sun 1s forwards;
     transform-origin: center;
 }
 
